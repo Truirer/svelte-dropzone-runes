@@ -1,6 +1,6 @@
 {
   "name": "svelte-dropzone-runes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Svelte component for fileupload and file dropzone. Compatible with Svelte 5 Runes",
   "scripts": {
     "dev": "vite dev",
