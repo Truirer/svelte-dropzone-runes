@@ -48,13 +48,13 @@ npm install svelte-dropzone-runes
 
 ## 🎯  Events
 
-| Event                       | Types                                         | Description                                                                                                                            |
-|-----------------------------|-----------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| `onDragenter`               | `DropzoneEventHandler<DataTransferItem>`      | Callback when a drag event enters the dropzone area.                                                                                   |
-| `onDragover`                | `DropzoneEventHandler<DataTransferItem>`      | Callback when a file is dragged over the dropzone.                                                                                     |
-| `onDragleave`               | `DropzoneEventHandler<DataTransferItem>`      | Callback when a file leaves the dropzone area.                                                                                         |
-| `onDrop`                    | `DropzoneEventHandler<File>`                  | Callback when files are dropped onto the dropzone.                                                                                     |
-| `onFileDialogCancel`        | `() => void`                                  | Callback when the file dialog is canceled.                                                                                             |
+| Event                       | Types                                         | Payload                                          | Description                                                                                                                            |
+|-----------------------------|-----------------------------------------------|--------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| `onDragenter`               | `DropzoneEventHandler<DataTransferItem>`      | {acceptedFiles,fileRejections,event}             | Callback when a drag event enters the dropzone area.                                                                                   |
+| `onDragover`                | `DropzoneEventHandler<DataTransferItem>`      | {acceptedFiles,fileRejections,event}             | Callback when a file is dragged over the dropzone.                                                                                     |
+| `onDragleave`               | `DropzoneEventHandler<DataTransferItem>`      | {acceptedFiles,fileRejections,event}             | Callback when a file leaves the dropzone area.                                                                                         |
+| `onDrop`                    | `DropzoneEventHandler<File>`                  | {acceptedFiles,fileRejections,event}             | Callback when files are dropped onto the dropzone.                                                                                     |
+| `onFileDialogCancel`        | `() => void`                                  |                                                  | Callback when the file dialog is canceled.                                                                                             |
 
 ## 🚀 Usage
 Basic Example
