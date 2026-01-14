@@ -10,7 +10,7 @@ export type DropzoneEvent<T> = {
     rejectedFiles: RejectedFile<T>[],
     event: DragEvent | Event
 }
-export type DropzoneEventHandler<T> = (data: DropzoneEvent<T>) => void | undefined
+export type DropzoneEventHandler<T> = (data: DropzoneEvent<T>) => void | Promise<void> | undefined
 //for more information 
 //https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types
 
