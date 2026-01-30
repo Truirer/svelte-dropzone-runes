@@ -108,7 +108,7 @@
 	// open the file dialog when SPACE/ENTER occurs on the dropzone
 	function onDropzoneKeyDown(event: KeyboardEvent) {
 		const target = event.target as HTMLElement | null;
-		const dropzoneElementType = target?.getAttribute('drozone-element-type');
+		const dropzoneElementType = target?.getAttribute('dropzone-element-type');
 		// Ignore keyboard events bubbling up the DOM tree
 		if (target?.id !== 'dropzone-element' && dropzoneElementType === 'dropzone-element') {
 			return;
@@ -245,7 +245,7 @@
 		onFileDialogCancel?.();
 	}
 	const dropzoneProps = $derived({
-		'data-drozone-element-type': 'dropzone-element',
+		'data-dropzone-element-type': 'dropzone-element',
 		id: 'dropzone-element',
 		tabindex: 0,
 		role: 'button',

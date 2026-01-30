@@ -104,7 +104,7 @@ export interface DropzoneAreaEvents {
  */
 
 export interface CustomDropzoneProps {
-    'data-drozone-element-type': string,
+    'data-dropzone-element-type': string,
     id: string,
     tabindex: number,
     role: string,
