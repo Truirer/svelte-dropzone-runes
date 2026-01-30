@@ -29,6 +29,7 @@
 		disableDropzoneKeydown = false,
 		disableDropzoneDrag = false,
 		name = '',
+		id = undefined,
 		inputElement = $bindable(),
 		required = false,
 		dropzoneElement = $bindable(),
@@ -272,6 +273,7 @@
 		{multiple}
 		{required}
 		type="file"
+		{id}
 		{name}
 		autocomplete="off"
 		tabindex="-1"

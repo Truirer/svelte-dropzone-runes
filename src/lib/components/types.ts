@@ -11,7 +11,7 @@ export type DropzoneEvent<T> = {
     event: DragEvent | Event
 }
 export type DropzoneEventHandler<T> = (data: DropzoneEvent<T>) => void | Promise<void> | undefined
-//for more information 
+//for more information
 //https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types
 
 export type MimeTypes =
@@ -98,7 +98,7 @@ export interface DropzoneAreaEvents {
     dragleave: EventHandler<DragEvent> | null
     drop: EventHandler<DragEvent> | null,
 }
-/** 
+/**
  * Custom Dropzone Event Handlers and props to make element act as dropzone inside the library.
  * Don't override listeners in order to make library function.
  */
@@ -125,6 +125,7 @@ export interface DropzoneProps {
     disableDropzoneKeydown?: boolean,
     disableDropzoneDrag?: boolean,
     name?: string,
+    id?: string,
     required?: boolean,
     inputElement?: HTMLInputElement,
     dropzoneElement?: HTMLElement | undefined
