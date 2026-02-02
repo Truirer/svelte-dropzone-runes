@@ -104,8 +104,6 @@ export interface DropzoneAreaEvents {
  */
 
 export interface CustomDropzoneProps {
-    'data-dropzone-element-type': string,
-    id: string,
     tabindex: number,
     role: string,
     onkeydown?: EventHandler<KeyboardEvent> | null
