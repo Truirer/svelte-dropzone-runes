@@ -29,6 +29,7 @@
 		disableDropzoneKeydown = false,
 		disableDropzoneDrag = false,
 		name = '',
+		id = undefined,
 		inputElement = $bindable(),
 		required = false,
 		dropzoneElement = $bindable(),
@@ -106,10 +107,8 @@
 
 	// open the file dialog when SPACE/ENTER occurs on the dropzone
 	function onDropzoneKeyDown(event: KeyboardEvent) {
-		const target = event.target as HTMLElement | null;
-		const dropzoneElementType = target?.getAttribute('drozone-element-type');
 		// Ignore keyboard events bubbling up the DOM tree
-		if (target?.id !== 'dropzone-element' && dropzoneElementType === 'dropzone-element') {
+		if (event.target !== event.currentTarget) {
 			return;
 		}
 
@@ -244,8 +243,6 @@
 		onFileDialogCancel?.();
 	}
 	const dropzoneProps = $derived({
-		'data-drozone-element-type': 'dropzone-element',
-		id: 'dropzone-element',
 		tabindex: 0,
 		role: 'button',
 		onkeydown: getKeyboardEventHandle(onDropzoneKeyDown),
@@ -272,6 +269,7 @@
 		{multiple}
 		{required}
 		type="file"
+		{id}
 		{name}
 		autocomplete="off"
 		tabindex="-1"
